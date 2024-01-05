@@ -22,7 +22,9 @@ public class JDBCInsertTest {
 			sql += "updateDate = NOW(),";
 			sql += "title = CONCAT('제목', RAND()),";
 			sql += "`body` = CONCAT('내용', RAND());";
-
+            
+			
+			
 			System.out.println(sql);
 
 			pstmt = conn.prepareStatement(sql);
