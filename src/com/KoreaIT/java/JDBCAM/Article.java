@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.Map;
 
 public class Article {
-
+    
 	private int id;
 	private LocalDateTime regDate;
 	private LocalDateTime updateDate;
@@ -78,5 +78,6 @@ public class Article {
 	public void setBody(String body) {
 		this.body = body;
 	}
-
+	
+    
 }
