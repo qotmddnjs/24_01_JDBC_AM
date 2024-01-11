@@ -74,10 +74,12 @@ public class App {
 			articleController.showDetail(cmd);
 		} else if (cmd.startsWith("article delete")) {
 			articleController.doDelete(cmd);
-		} else {
-			System.out.println("처리할 수 없는 명령어");
+		}
+		System.out.println("처리할 수 없는 명령어");
+		{
 		}
 
 		return 0;
 	}
+
 }
