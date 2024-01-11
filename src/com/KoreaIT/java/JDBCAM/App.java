@@ -62,7 +62,9 @@ public class App {
 		MemberController memberController = new MemberController(conn, sc);
 		ArticleController articleController = new ArticleController(conn, sc);
 
-		if (cmd.equals("member join")) {
+		if (cmd.equals("member login")) {
+			memberController.login();
+		} else if (cmd.equals("member join")) {
 			memberController.doJoin();
 		} else if (cmd.equals("article write")) {
 			articleController.doWrite();
@@ -74,12 +76,10 @@ public class App {
 			articleController.showDetail(cmd);
 		} else if (cmd.startsWith("article delete")) {
 			articleController.doDelete(cmd);
-		}
-		System.out.println("처리할 수 없는 명령어");
-		{
+		} else {
+			System.out.println("처리할 수 없는 명령어");
 		}
 
 		return 0;
 	}
-
 }
